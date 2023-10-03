@@ -2,6 +2,7 @@
   "name": "sharkdao-snapbot",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "type": "module",
   "repository": "https://github.com/ndodson/sharkdao-snapbot.git",
   "author": "nick@calabara.com",
   "license": "MIT",
@@ -19,6 +20,11 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "@ethersproject/shims": "^5.7.0",
+    "@snapshot-labs/snapshot.js": "^0.7.2",
+    "dotenv": "^16.3.1",
+    "ethers": "5.7.2",
+    "express": "^4.18.2",
+    "nerman": "^0.0.20"
   }
 }
