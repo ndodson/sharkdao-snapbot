@@ -5,7 +5,7 @@ dotenv.config();
 const provider = new ethers.providers.AlchemyProvider('homestead', process.env.ALCHEMY_KEY);
 const hub = 'https://hub.snapshot.org';
 const client = new snapshot.Client712(hub);
-const wallet = ethers.Wallet.createRandom();
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY);
 export const addMissingSchemes = (descriptionText) => {
     const regex = /\[(.*?)\]\(((?!https?:\/\/|#)[^)]+)\)/g;
     const replacement = '[$1](https://$2)';

@@ -7,7 +7,7 @@ const provider = new ethers.providers.AlchemyProvider('homestead', process.env.A
 const hub = 'https://hub.snapshot.org';
 const client = new snapshot.Client712(hub);
 
-const wallet = ethers.Wallet.createRandom();
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY);
 
 
 export const addMissingSchemes = (descriptionText: string | undefined) => {
